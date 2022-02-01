@@ -1,0 +1,46 @@
+.box-send{
+    background: #fff;
+    border-radius: 10px;
+    height: 25.625em;
+    width: 17.5em;
+    margin: -12.8125em 0 0;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 10%), 0 10px 30px 0 rgb(0 0 0 / 20%);
+    position: absolute;
+    top: 300px;
+    left: 5em;
+    display: 'flex';
+    justify-content: 'space-between';
+}
+
+.input-text{
+    padding: 1.14286em 8% 0 .71429em;
+    border: 0px;
+}
+
+.button-send-inactive{
+    background: #babcbf;
+    background-color: #babcbf;
+    color: #fff;
+    cursor: default;
+    position: absolute;
+    left: 0;
+    outline: 0;
+    top: 0 ;
+}
+
+.button-send{
+    border: 1px solid #409fff;
+    border-radius: 1.25em;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    outline: 0;
+    top: 0 ;
+}
+
+.container-table{
+    position: absolute;
+    top: 280px;
+    left: 385px;
+    right: 0;
+}
