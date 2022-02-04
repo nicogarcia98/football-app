@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FormControl, InputLabel, Select, MenuItem, OutlinedInput, Button} from '@mui/material'
-import TableView from './TableView.js'
+import Ball from '../assets/images/ball.png'
 import './styles.css'
 
 
-export default function WindowSend({setSelectOption, selectOption, setListTableId}) {
+export default function WindowSend({setSelectOption, selectOption, setDataTable, setListTableId}) {
 
     
     const optionsTitle = [
@@ -21,7 +21,8 @@ export default function WindowSend({setSelectOption, selectOption, setListTableI
         setSelectOption(event.target.value)
     };
     
-    const handleClick = (event) => {
+    const handleClick = () => {
+        console.log('selectOption', selectOption)
         setListTableId(selectOption)
     };
 
@@ -46,7 +47,8 @@ export default function WindowSend({setSelectOption, selectOption, setListTableI
                             </MenuItem>
                         ))}
                     </Select>
-                    
+                    {/* <CSVReader setDataTable={setDataTable}></CSVReader> */}
+                    <img src={Ball} />
                     <Button onClick={handleClick} 
                         style={{marginBottom: '30px'}} 
                         disabled={selectOption ? false : true}

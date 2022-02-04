@@ -38,9 +38,12 @@
     top: 0 ;
 }
 
-.container-table{
+.container-box{
     position: absolute;
     top: 280px;
     left: 385px;
     right: 0;
+}
+
+.container-table{
 }

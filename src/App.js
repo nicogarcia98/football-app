@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import WindowSend from './components/WindowSend'
@@ -8,6 +8,11 @@ function App() {
 
   const [selectOption, setSelectOption] = useState('')
   const [listTableId, setListTableId] = useState('')
+  const [dataTable, setDataTable] = useState()
+
+  useEffect(() => {
+    console.log(listTableId)
+  }, [listTableId]);
 
   const options = [
     'Cantidad total de personas registradas.',
@@ -20,17 +25,22 @@ function App() {
 
   return (
     <div>
-      <img src="./assets/images/background-football.jpg"></img>
       <div className="container-text-option">
         <h1>Seleccione la opción que desee</h1>
         {options.map((item, index) => (
-          <div>
+          <div key={index}>
             <p style={{ margin: '3px', fontSize: '14px' }}>{index + 1} - {item}</p>
           </div>
         ))}
       </div>
-      <WindowSend setSelectOption={setSelectOption} selectOption={selectOption} setListTableId={setListTableId}></WindowSend>
-      <TableView options={selectOption}></TableView>
+      <WindowSend 
+        setSelectOption={setSelectOption} 
+        selectOption={selectOption} 
+        setListTableId={setListTableId}
+        setDataTable={setDataTable}
+        >
+        </WindowSend>
+        <TableView option={listTableId}></TableView>
     </div>
   );
 }
